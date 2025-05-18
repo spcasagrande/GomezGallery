@@ -62,7 +62,8 @@ namespace GomezGallery.Domain.Concrete
 					body.AppendFormat("{0} x {1} (subtotal: {2:c})",
 										line.Quantity,
 										line.Picture.Name,
-										subtotal);
+										subtotal)
+						.AppendLine("\n");
 				}
 
 				body.AppendFormat("\nTotal order value: {0:c}", cart.ComputeTotalValue())

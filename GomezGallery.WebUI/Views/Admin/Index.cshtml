@@ -28,7 +28,7 @@
 					<td class="text-center">
 						@using (Html.BeginForm("Delete", "Admin"))
 						{
-							@Html.Hidden("ProductID", item.PictureID)
+							@Html.Hidden("PictureID", item.PictureID)
 							<input type="submit"
 								   class="btn btn-danger"
 								   value="Delete" />
