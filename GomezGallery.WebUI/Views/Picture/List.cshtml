@@ -1,0 +1,14 @@
+﻿@model GomezGallery.WebUI.Models.PictureListViewModel
+
+@{
+	ViewBag.Title = "Gomez Gallery";
+}
+
+@foreach (var p in Model.Pictures)
+{
+	@Html.Partial("PictureSummary", p)
+}
+
+<div class="btn-group float-end">
+	@Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
+</div>
